@@ -1,8 +1,73 @@
 body{
     background-color: rgb(255, 255, 255);
 }
-img .logo{
-    vertical-align: middle;
-    margin-left: auto;
-    margin-right: auto;
+.pagestructure{
+    display: grid;
+    grid-template-rows:20% 4fr 2fr 20% 10% 1fr 1fr;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "menu" 
+    "logo"
+    "search-string"
+    "search-buttons" 
+    "language" 
+    "top-footer"
+    "bottom-footer" ;
+      
+}
+.menu{
+    grid-area: menu;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns:10% 10% 10% 10%;
+    justify-content: flex-end;    
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+.logo{
+   grid-area: logo;
+   justify-self: center;
+   margin-top: 5%;
+}
+.search-string{
+    grid-area: search-string;
+    justify-self: center;
+    display:grid;
+    grid-template-columns: 10px minmax(60px, 486px) 10px;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(222, 230, 230);
+    border-radius: 20px 20px 20px 20px;
+    border-color: black;
+    border-style: 0.5px solid;
+    
+}
+.search-buttons{
+    grid-area: search-buttons;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-self: center;
+}
+.language{
+    grid-area: language;
+    margin-top:10px;
+    justify-self: center;
+    align-self: center;
+}
+.top-footer{
+    grid-area: top-footer;
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: rgba(0,0,0,.54);
+}
+.bottom-footer{
+    grid-area: bottom-footer;
+    background-color: #f2f2f2;
+        
 }
